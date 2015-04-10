@@ -97,9 +97,43 @@ class Data_model extends CI_Model {
 						"date" => "23-05-2014",
 						"time" => "6 PM",
 						"venue" => "the astor theatre"		
-					)
+					),
 					
+				"session-11" => 
+					array(
+						"name" => "top 100 session 11",
+						"ticket_link" => "http://www.ticketmaster.com.au/event/13004C92E345D3FE",
+						"date" => "23-05-2014",
+						"time" => "6 PM",
+						"venue" => "the astor theatre"		
+					),
 				
+				"session-12" => 
+					array(
+						"name" => "top 100 session 12",
+						"ticket_link" => "http://www.ticketmaster.com.au/event/13004C92E345D3FE",
+						"date" => "23-05-2014",
+						"time" => "6 PM",
+						"venue" => "the astor theatre"		
+					),
+					
+				"session-13" => 
+					array(
+						"name" => "top 100 session 13",
+						"ticket_link" => "http://www.ticketmaster.com.au/event/13004C92E345D3FE",
+						"date" => "23-05-2014",
+						"time" => "6 PM",
+						"venue" => "the astor theatre"		
+					),
+					
+				"session-14" => 
+					array(
+						"name" => "top 100 session 14",
+						"ticket_link" => "http://www.ticketmaster.com.au/event/13004C92E345D3FE",
+						"date" => "23-05-2014",
+						"time" => "6 PM",
+						"venue" => "the astor theatre"		
+					)
 		);	
 		
 		
