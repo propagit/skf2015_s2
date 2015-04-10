@@ -8,6 +8,7 @@ class Stk extends CI_Controller {
 		$this->load->model('film_model');
 		$this->load->model('content_model');
 		$this->load->model('news_sticker_model');
+		$this->load->model('data_model');
 	}
 	
 	
@@ -215,11 +216,16 @@ class Stk extends CI_Controller {
 		
 		$genre = $this->session->userdata('genre');
 		$session = $this->session->userdata('session');
-		$total = $this->film_model->search_count_all($keyword,$type,$date,$genre,$session);
+		#$total = $this->film_model->search_count_all($keyword,$type,$date,$genre,$session);
+		$total = $this->film_model->search_row_all($keyword,$type,$date,$genre,$session,$row,$sort,true);
+		#var_dump($total);
+		$data['films'] = $this->film_model->search_row_all($keyword,$type,$date,$genre,$session,$row,$sort);
+		
+		
 		$this->load->library('pagination');
 		$config['base_url'] = base_url().'search/';
 		$config['total_rows'] = $total;
-		$config['per_page'] = 9;
+		$config['per_page'] = RECORD_PER_PAGE;
 		$config['num_links'] = 4;
 		$config['uri_segment'] = 2;
 		$config['cur_tag_open'] = '&nbsp;<span class="active" style="font-size:18px">';
@@ -230,6 +236,7 @@ class Stk extends CI_Controller {
 		$config['last_link'] = 'Last &gt;';
 		$data['pages']='';
 		$data['address']='';
+		$data['session_warning'] = false;
 		$this->pagination->initialize($config);
 		if (!$session) {
 			
@@ -246,22 +253,19 @@ class Stk extends CI_Controller {
 			$data['previous'] = "";
 			$data['heading2'] = "";
 		} else { 
-			
-			/*if ($session == 5 ) {
-                $data['pages'] = '<div class="session_notice">Comedy</div>'; 
-                $data['address'] = '<div class="address">The Astor Theatre</div>'; 
-            }
-            else{$data['address'] = '<div class="address">The Astor Theatre</div>'; }
-            */
-			$data['address'] = '<div class="address">The Astor Theatre</div>';
+
+			#$data['address'] = '<div class="address">The Astor Theatre</div>';
+			$data['address'] = 'The Astor Theatre';
 			$data['heading'] = "COMPETITION SESSION ".$session;
 			if($session)
 			{
 				$data['heading'] = "TOP 100 SESSION ".$session;
+				$top_100_session_key = "session-" . $session;
+				$data['event'] = $this->data_model->events($top_100_session_key);
 			}
 			//Author: Tom Nguyen, 23 May 2011
 			if ($session == 12 ) {
-				$data['pages'] .= '<div class="session_notice">This session contains content that may cause distress to some viewers.</div>'; 
+				$data['session_warning'] = true; 
 			}
             
 			//end
@@ -280,9 +284,6 @@ class Stk extends CI_Controller {
 			$data['heading2'] = $com_session['date'].'<br />'.$com_session['time'];
 		}
 		
-		$data['films'] = $this->film_model->search_row_all($keyword,$type,$date,$genre,$session,$row,$sort);
-		#print var_dump($data['films']);
-		#return;
 		$data['dates'] = $this->film_model->get_dates();
 		$data['genres'] = $this->film_model->get_genres();
 		
@@ -311,8 +312,8 @@ class Stk extends CI_Controller {
 		$data['genres'] = $this->film_model->get_genres();
 		$this->load->view('stk/common/header',$data);
 		$this->load->view('stk/details',$data);
-		//$this->load->view('stk/common/right');
-		$this->load->view('stk/advertisement');		
+		#$this->load->view('stk/common/right');
+		#$this->load->view('stk/advertisement');		
 		$this->load->view('stk/common/footer');
 	}
 	function adredirect($banner_id) {

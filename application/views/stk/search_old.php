@@ -10,59 +10,59 @@
 				    	<div class="leftside">
 				    		<? if($address !='' && isset($address)){?>
 					        <div class="film-date"><span class="subheading3">
-					        	<?php if($heading == 'TOP 100 SESSION 1'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 1'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E345D3FE"; ?>
 					        		FRIDAY 23 MAY, 6PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 2'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 2'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E345D401"; ?>
 					        		FRIDAY 23 MAY, 7:45PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 3'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 3'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E346D404"; ?>
 					        		FRIDAY 23 MAY, 9:30PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 4'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 4'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E347D40C"; ?>
 					        		SATURDAY 24 MAY, 7:15PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 5'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 5'){ $buy_link = "http://www.ticketmaster.com.au/skff-australias-top-100-session-st-kilda-victoria-25-05-2014/event/13004C92E349D41D"; ?>
 					        		SUNDAY 25 MAY, 4:00PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 6'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 6'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E349D423"; ?>
 					        		SUNDAY 25 MAY, 5:45PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 7'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 7'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E34AD42D"; ?>
 					        		TUESDAY 27 MAY, 6:30PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 8'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 8'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E34BD42F"; ?>
 					        		TUESDAY 27 MAY, 8:15PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 9'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 9'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E34CD43B"; ?>
 					        		WEDNESDAY 28 MAY, 7:45PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 10'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 10'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E34DD43F"; ?>
 					        		THURSDAY 29 MAY, 6:30PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 11'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 11'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E34ED447"; ?>
 					        		FRIDAY 30 MAY, 8:15PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 12'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 12'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E34FD44E"; ?>
 					        		FRIDAY 30 MAY, 10:00PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 13'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 13'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E350D455"; ?>
 					        		SATURDAY 31 MAY,  3:00PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
-					        	<?php if($heading == 'TOP 100 SESSION 14'){?>
+					        	<?php if($heading == 'TOP 100 SESSION 14'){ $buy_link = "http://www.ticketmaster.com.au/event/13004C92E350D459"; ?>
 					        		SATURDAY 31 MAY,  4:45PM<br/>
 					        		THE ASTOR THEATRE
 					        	<?php }?>
@@ -78,9 +78,10 @@
 	        				<div class="nav" style="margin-right:30px; float: right"><?=$previous?></div>
                             <? if($next!='' || $previous!=''){?> <div style="height:10px; clear:both;"></div> <? }?>
                             <? if($heading != "SEARCH RESULTS"){ ?>
-                                <div class="button-buy-ticket" style="float:left;">
+                                <a target="_blank" href="<?=$buy_link;?>"><div class="button-buy-ticket" style="float:left;">
                                     Buy Tickets
                                 </div>
+                                </a>
                             <? } ?>
 				    	</div>
                         <? } else{?>
@@ -97,7 +98,7 @@
 					$counter = 1;
 					foreach($films as $film) 
 					{ 
-						$genres = $this->Film_model->get_film_genres($film['id']); 
+						$genres = $this->film_model->get_film_genres($film['id']); 
 						$genre = '';
 						if ($genres) {
 							$genre = $genres[0]['name'];

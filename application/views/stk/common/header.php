@@ -53,6 +53,17 @@
 </head>
 
 <body>
+<!--facebook like-->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script><!--facebook like-->
+
+
 <div id="side-ladder" class="ladder-wrap hidden-xs">
     <div class="ladder1"></div>
     <div class="ladder2"></div>
@@ -104,6 +115,11 @@
         <?php $this->load->view('stk/common/nav');?>
     </div>
 </nav>
+
+
+<div class="container visible-xs mob-calendar">
+	<?php $this->load->view('stk/common/calendar');?>
+</div>
 
 
 

@@ -29,12 +29,11 @@
         <hr>
         <div class="clear"></div>
         
-        <h4>search films</h4>
+        <h4>subscribe</h4>
+        <span class="label skf-news-label">News delivered straight to your inbox</span>
         <div class="subscribe-box">
-        	<form method="post" action="<?=base_url()?>search"> 
-            	<input type="text" id="keyword" name="keyword">
-            	<button type="submit" class="btn subscribe-btn">Search</button>
-            </form>
+            <input type="text" id="newsletter-email">
+            <button type="button" class="btn subscribe-btn" id="newsletter-btn">Enter</button>
         </div>
     </div>
     

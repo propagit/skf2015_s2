@@ -67,7 +67,8 @@ class Film_model extends CI_Model {
         
 		return $query->num_rows();
 	}
-	function search_row($keyword,$type,$date,$genre,$session,$row,$sort) {
+	
+	function search_row($keyword,$type,$date,$genre,$session,$row,$sort,$return_total_count=false) {
 		
 		// $sql = "SELECT distinct `films`.*
 				// FROM `films` where `films`.`title` LIKE '%$keyword%' OR `films`.`director` LIKE '%$keyword%' OR `films`.`producer` LIKE '%$keyword%' OR `films`.`artist` LIKE '%$keyword%'";
@@ -105,6 +106,7 @@ class Film_model extends CI_Model {
 		} else if ($sort == "order") {
 			$sql .= " ORDER BY `films`.`order` ASC";
 		}
+		
 		if (!$session) {
 			if ($row != "") { $sql .= " LIMIT $row,9"; }
 			else { $sql .= " LIMIT 9"; }
@@ -172,7 +174,7 @@ class Film_model extends CI_Model {
         
 		return $query->num_rows();
 	}
-	function search_row_all($keyword,$type,$date,$genre,$session,$row,$sort) {
+	function search_row_all($keyword,$type,$date,$genre,$session,$row,$sort,$return_total_count = false) {
 		
 		//echo 'date: '.$keyword. strtotime($keyword).'<br>'. date('Y-m-d',strtotime($keyword));
 		
@@ -226,9 +228,15 @@ class Film_model extends CI_Model {
 		} else if ($sort == "order") {
 			$sql .= " ORDER BY `films`.`order` ASC";
 		}
+		
+		if($return_total_count){
+			$query = $this->db->query($sql);
+			return $query->num_rows();
+		}
+		
 		if (!$session) {
-			if ($row != "") { $sql .= " LIMIT $row,9"; }
-			else { $sql .= " LIMIT 9"; }
+			if ($row != "") { $sql .= " LIMIT $row,".RECORD_PER_PAGE; }
+			else { $sql .= " LIMIT ".RECORD_PER_PAGE; }
 		}
 		   
 		 $query = $this->db->query($sql);

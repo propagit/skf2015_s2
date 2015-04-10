@@ -323,13 +323,12 @@ a {
   width: 100%;
   padding: 25px 30px;
   /*timer*/
-  /*subscribe-box*/
-  /*calendar*/ }
+  /*subscribe-box*/ }
   #side-panel hr {
     border-color: transparent;
     float: left;
     width: 100%;
-    margin-top: 14.8px; }
+    margin-top: 28.8px; }
   #side-panel h4 {
     font-family: "Inconsolata";
     font-weight: 300;
@@ -384,6 +383,53 @@ a {
       padding: 0; }
 
 /*side-panel*/
+.calendar, .mob-calendar {
+  /* table*/ }
+  .calendar h4, .mob-calendar h4 {
+    margin-bottom: 35px !important; }
+  .calendar .whats-on, .mob-calendar .whats-on {
+    color: #ffef3f; }
+  .calendar table, .mob-calendar table {
+    width: 100%; }
+    .calendar table tr, .mob-calendar table tr {
+      display: flex; }
+    .calendar table th, .mob-calendar table th, .calendar table td, .mob-calendar table td {
+      border-color: #3d3d3c;
+      border-style: solid;
+      border-width: 2px;
+      text-align: center;
+      line-height: 40px;
+      flex: 1;
+      font-weight: 100;
+      font-size: 12px; }
+    .calendar table thead th, .mob-calendar table thead th {
+      background-color: #706f6f;
+      text-transform: uppercase; }
+  .calendar .festival-month, .mob-calendar .festival-month {
+    background-color: #c6c6c6;
+    color: #3d3d3c; }
+  .calendar .event-dates, .mob-calendar .event-dates {
+    background-color: #ffef3f;
+    color: #3d3d3c; }
+
+/*calendar*/
+.mob-calendar {
+  margin-bottom: 30px; }
+  .mob-calendar h4 {
+    margin-bottom: 5px !important;
+    margin-top: 25px;
+    color: #006f80;
+    font-size: 22px; }
+  .mob-calendar th, .mob-calendar td {
+    border-color: #79c7cc !important; }
+  .mob-calendar table thead th {
+    background-color: transparent;
+    color: #006f80; }
+  .mob-calendar table td {
+    background-color: #b7dfe4; }
+  .mob-calendar .festival-month {
+    background-color: #b7dfe4; }
+
 .tiles {
   margin-top: 0; }
   .tiles .tile {
@@ -482,6 +528,122 @@ a {
     .cms-body .content-text span {
       font-size: 14px !important;
       font-family: "Open Sans", sans-serif !important; }
+
+.search-results {
+  padding-left: 12.5px;
+  padding-right: 15px;
+  /*search block*/ }
+  .search-results h1, .search-results .caption h4, .caption .search-results h4, .search-results .carousel .carousel-caption h4, .carousel .carousel-caption .search-results h4, .search-results .tiles .tile .tile-caption h4, .tiles .tile .tile-caption .search-results h4 {
+    padding-left: 12.5px;
+    padding-right: 15px;
+    text-transform: uppercase;
+    padding-top: 20px; }
+  .search-results h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 0; }
+  .search-results hr {
+    margin-top: 30px;
+    border-top: 2px solid #006f80; }
+  .search-results .viewer-discreation {
+    padding-left: 12.5px;
+    padding-right: 15px;
+    font-style: italic;
+    margin-bottom: 10px;
+    width: 100%;
+    float: left;
+    margin-top: -10px; }
+  .search-results .pages {
+    padding-left: 12.5px;
+    padding-right: 15px;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px; }
+  .search-results .sessions-wrap {
+    margin-bottom: 30px; }
+    .search-results .sessions-wrap .nav-sessions {
+      margin-bottom: 20px; }
+      .search-results .sessions-wrap .nav-sessions span {
+        display: inline-block; }
+      .search-results .sessions-wrap .nav-sessions .next {
+        float: right;
+        text-align: right; }
+  .search-results .search-block {
+    padding-left: 12.5px;
+    padding-right: 15px;
+    padding-top: 20px;
+    float: left; }
+    .search-results .search-block h3 {
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0; }
+    .search-results .search-block span {
+      font-weight: 600; }
+    .search-results .search-block .genre {
+      display: block; }
+    .search-results .search-block ul.credits {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 20px; }
+      .search-results .search-block ul.credits li strong {
+        font-weight: 600; }
+  .search-results .new-row {
+    padding-left: 12.5px;
+    padding-right: 15px;
+    width: 100%;
+    float: left; }
+
+/* search results*/
+.film h1, .film .caption h4, .caption .film h4, .film .carousel .carousel-caption h4, .carousel .carousel-caption .film h4, .film .tiles .tile .tile-caption h4, .tiles .tile .tile-caption .film h4 {
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 15px; }
+.film h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0; }
+.film .detail {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 30px; }
+  .film .detail span {
+    font-weight: 600; }
+  .film .detail .fares {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px; }
+  .film .detail .fare-solo, .film .detail .fare-group {
+    display: block; }
+
+/*film*/
+.btn-buy {
+  min-width: 50px;
+  border-radius: 0;
+  color: white;
+  background-color: #3d3d3c;
+  text-transform: uppercase;
+  border-radius: 0;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 9px 0 6px;
+  letter-spacing: 1px;
+  outline: none;
+  text-transform: capitalize;
+  padding-left: 20px;
+  padding-right: 20px; }
+  .btn-buy:hover, .btn-buy:focus {
+    color: white;
+    outline: none; }
+  .btn-buy .fa {
+    font-size: 18px; }
 
 #footer {
   margin-top: 30px; }
@@ -626,6 +788,9 @@ a {
 .clear {
   clear: both; }
 
+.block {
+  display: block; }
+
 /* responsive stuff*/
 @media (min-width: 992px) and (max-width: 1199px) {
   #header {
@@ -650,7 +815,7 @@ a {
     /*subscribe-box*/ }
     #side-panel hr {
       margin-top: 0;
-      margin-bottom: 16.8px; }
+      margin-bottom: 14.4px; }
     #side-panel h4 {
       font-size: 19px; }
     #side-panel .timer {
@@ -726,6 +891,12 @@ a {
   .tiles .tile {
     margin-bottom: 25px; }
 
+  .search-results {
+    /*search block*/ }
+    .search-results .search-block:last-child hr {
+      display: none; }
+
+  /* search results*/
   #footer {
     /* block*/
     /* sponsors */

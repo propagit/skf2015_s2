@@ -94,6 +94,13 @@ $fa:'FontAwesome';
 	}
 }
 
+
+@mixin add_gutters($left:15px,$right:15px){
+	padding-left:$left;
+	padding-right:$right;
+}
+
+
 .app-btn{
 	@include btn($black,$bg2);	
 }
@@ -550,7 +557,7 @@ $nav_height:70px;
 		border-color:transparent;	
 		float:left;
 		width:100%;
-		margin-top:14.8px;
+		margin-top:28.8px;
 		
 	}
 	
@@ -643,11 +650,91 @@ $nav_height:70px;
 		
 	} /*subscribe-box*/
 	
-	.calendar{
-		
-	} /*calendar*/
 	
 } /*side-panel*/
+
+.calendar{		
+	h4{
+		margin-bottom:35px !important;	
+	}
+	
+	.whats-on{
+		color:$color2;	
+	}
+	
+	table{
+		width:100%;
+		
+		tr{
+			display:flex;	
+		}
+		
+		th,td{
+			border-color:$bg4;
+			border-style:solid;
+			border-width:2px;
+			text-align:center;
+			line-height:40px;
+			flex:1;
+			font-weight:100;
+			font-size:12px;
+		}
+		
+		thead{
+			th{
+				background-color:#706f6f;
+				text-transform:uppercase;
+			}
+		}
+		
+	} /* table*/
+	
+	.festival-month{
+		background-color:#c6c6c6;
+		color:$color4;
+	}
+	.event-dates{
+		background-color:$bg2;
+		color:$color4;
+	}
+	
+} /*calendar*/
+
+
+
+$mob_calendar_bg:#b7dfe4;
+.mob-calendar{
+	@extend .calendar;	
+	
+	margin-bottom:30px;
+	
+	h4{
+		margin-bottom: 5px !important;
+ 		margin-top: 25px;	
+		color:$color3;
+		font-size:22px;
+	}
+	
+	th,td{
+		border-color:$color1 !important;	
+	}
+	
+	table{
+		thead{
+			th{
+				background-color:transparent;	
+				color:$color3;
+			}
+		}
+		
+		td{
+			background-color:$mob_calendar_bg;
+		}
+	}
+	.festival-month{
+		background-color:$mob_calendar_bg;	
+	}
+}
 
 
 $tile_caption_height:40px;
@@ -781,6 +868,149 @@ $tile_caption_height:40px;
 	
 }
 
+.search-results{
+	@include add_gutters(12.5px);
+	
+	h1{
+		@include add_gutters(12.5px);
+		text-transform:uppercase;
+		padding-top:20px;
+	}
+	
+	h2{
+		font-size: 18px;
+		text-transform: uppercase;
+		padding: 0;
+		margin-top: 5px;
+		margin-bottom: 0;	
+	}
+	
+	hr{
+		margin-top: 30px;
+		border-top: 2px solid $color3;	
+	}
+	
+	.viewer-discreation{
+		@include add_gutters(12.5px);
+		font-style: italic;
+		margin-bottom: 10px;
+		width: 100%;
+		float: left;
+		margin-top: -10px;
+	}
+	
+	.pages{
+		@include add_gutters(12.5px);
+		float:left;
+		width:100%;
+		margin-bottom:10px;	
+	}
+	
+	.sessions-wrap{
+		margin-bottom:30px;
+		
+		.nav-sessions{
+			margin-bottom:20px;
+			
+			span{
+				display:inline-block;	
+			}
+			.next{
+				float:right;
+				text-align:right;	
+			}
+				
+		}
+	}
+	
+	.search-block{
+		@include add_gutters(12.5px);	
+		padding-top:20px;
+		float:left;
+		
+		h3{
+			text-transform:uppercase;
+			font-weight:400;
+			font-size:18px;	
+			letter-spacing:0;
+		}
+		span{
+			font-weight:600;	
+		}
+		.genre{
+			display:block;	
+		}
+		ul.credits{
+			list-style:none;	
+			margin:0;
+			padding:0;
+			margin-bottom:20px;
+			
+			li{
+				strong{
+					font-weight:600;	
+				}
+			}
+		}
+		
+		
+	} /*search block*/
+	
+	.new-row{
+		@include add_gutters(12.5px);
+		width:100%;
+		float:left;	
+		
+		
+	}
+} /* search results*/
+
+
+.film{
+	h1{
+		text-transform:uppercase;
+		margin:0;
+		margin-bottom:15px;
+	}
+	h3{
+		text-transform:uppercase;
+		font-weight:400;
+		font-size:18px;	
+		letter-spacing:0;
+		margin:0;
+		margin-top:5px;
+		padding:0;
+	}
+	.detail{
+		@include add_gutters(30px,30px);	
+		margin-top:30px;
+		
+		span{
+			font-weight:600;	
+		}
+		
+		.fares{
+			display:block;
+			margin-top:20px;
+			margin-bottom:30px;	
+		}
+		
+		.fare-solo,.fare-group{
+			display:block;	
+		}
+		
+		
+		
+		
+	}
+} /*film*/
+
+.btn-buy{
+	@include btn($white,$bg4);
+	text-transform:capitalize;
+	padding-left:20px;
+	padding-right:20px;
+}
 
 #footer{
 	margin-top:30px;
@@ -968,6 +1198,9 @@ $tile_caption_height:40px;
 .clear{
 	clear:both;	
 }
+.block{
+	display:block;	
+}
 
 
 /* responsive stuff*/
@@ -1008,7 +1241,7 @@ $tile_caption_height:40px;
 		
 		hr{
 			 margin-top: 0;
- 			 margin-bottom: 16.8px;	
+ 			 margin-bottom: 14.4px;	
 		}
 		
 		h4{
@@ -1155,6 +1388,19 @@ $tile_caption_height:40px;
 			margin-bottom:25px;		
 		}
 	}
+	
+	.search-results{
+		
+		.search-block{
+			&:last-child{
+				hr{
+					display:none;	
+				}
+			}
+			
+		} /*search block*/
+	
+	} /* search results*/
 	
 	#footer{
 		.block{

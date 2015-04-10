@@ -48,6 +48,6 @@
     </div>
     
     <div class="col-md-4 x-r-gutter visible-xs">
-        <?php #$this->load->view('stk/common/right');?>    
+        <?php $this->load->view('stk/common/right');?>    
     </div>
 </div>
