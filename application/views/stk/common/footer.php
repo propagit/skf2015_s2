@@ -51,42 +51,48 @@
     
     <div class="quick-links">
         <div class="container">
-            <div class="col-md-8 block">
-                <div class="rt-block">
-                    <div class="col-md-7 x-gutters">
-                        <h6>St Kilda Film Festival</h6>
-                        <p>
-                            The St Kilda Film Festival is one of Australia's<br>
-                            largest and oldest short film festivals.
-                        </p>
-                        
-                        <?php if(0){ # commented until stage 2?>
-                        <!--<ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Festival Credits</a></li>
-                        </ul>-->
-                        <?php } ?>
-                    </div> 
-                    
-                    <div class="col-md-5 x-gutters">
-                        <h6>Contact Us</h6>
-                        <p>
-                            Festival Office: (03) 9209 6490<br>
-                            City of Port Phillip ASSIST: (03) 9209 6777
-                        </p>
-                        
-                        <p>
-                            St Kilda Film Festival<br>
-                            Private Bag 3<br>
-                            PO St Kilda VIC 3182
-                        </p>
-                        
-                        <p><a href="mailto:filmfest@portphillip.vic.gov.au">filmfest@portphillip.vic.gov.au</a></p>
-                        
-                    </div> 
-                    
+        	<div class="col-md-4 col-sm-12 col-xs-12 block lt-block">
+                <h6>subscribe</h6>
+                <p>News delivered straight to your inbox</p>
+                <div class="subscribe-box">
+                    <input type="text" id="newsletter-email">
+                    <button type="button" class="btn subscribe-btn" id="newsletter-btn">Enter</button>
                 </div>
+            </div>
+        	
+            <div class="col-md-8 col-sm-12 col-xs-12 block">
+                <div class="col-md-7 x-gutters">
+                    <h6>St Kilda Film Festival</h6>
+                    <p>
+                        The St Kilda Film Festival is one of Australia's<br>
+                        largest and oldest short film festivals.
+                    </p>
+                    
+                    <?php if(0){ # commented until stage 2?>
+                    <!--<ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Festival Credits</a></li>
+                    </ul>-->
+                    <?php } ?>
+                </div> 
+                
+                <div class="col-md-5 x-gutters">
+                    <h6>Contact Us</h6>
+                    <p>
+                        Festival Office: (03) 9209 6490<br>
+                        City of Port Phillip ASSIST: (03) 9209 6777
+                    </p>
+                    
+                    <p>
+                        St Kilda Film Festival<br>
+                        Private Bag 3<br>
+                        PO St Kilda VIC 3182
+                    </p>
+                    
+                    <p><a href="mailto:filmfest@portphillip.vic.gov.au">filmfest@portphillip.vic.gov.au</a></p>
+                    
+                </div> 
             </div>
         </div>
     </div>
