@@ -6,6 +6,7 @@ class Fsm extends CI_Controller {
 			redirect('authorize');
 		}
 		$this->load->model('film_model');
+		$this->load->model('menu_model');
 	}
 	function index($row="") {
 		$this->load->view('admin/common/header');
@@ -73,7 +74,19 @@ class Fsm extends CI_Controller {
 	}
 	function film() {
 		$data['genres'] = $this->film_model->get_genres();
-		$data['dates'] = $this->film_model->get_dates();
+		
+		# old dumb code, that got the recrods from a manually filled database
+		#$data['dates'] = $this->film_model->get_dates();
+	
+		# festival runs for 10 days
+		$dates = array();
+		$opening = $this->menu_model->get_opening_date();
+		for($i = 0; $i < 10; $i++){
+			$dates[$i]['date'] = date('Y-m-d',strtotime($opening['opening_date'] . '+'. $i . ' days')); 	
+		}
+		$data['dates'] = $dates;
+		
+		$data['opening_date'] = $this->menu_model->get_opening_date();
 		$data['venues'] = $this->film_model->get_venues();
 		$this->load->view('admin/common/header');
 		$this->load->view('admin/fsm/film',$data);

@@ -58,10 +58,14 @@
 
 <?php
 	$opening = $this->menu_model->get_opening_date();
+	#print_r($opening);
+	$year = date('Y',strtotime($opening['opening_date']));
+	$month = date('m',strtotime($opening['opening_date']));
+	$day = date('d',strtotime($opening['opening_date']));
 ?>     
 <script>
 $('#countdown-timer').countdown({
-	until: new Date(2015,5-1,24),
+	until: new Date(<?=$year;?>,<?=$month-1;?>,<?=$day;?>),
 	padZeroes: true,
 	labels: ['YEARS', 'MONTHS', 'WEEKS', 'DAYS', 'HOURS', 'MINS', 'SECS'],
 	
