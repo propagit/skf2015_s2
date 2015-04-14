@@ -557,7 +557,7 @@ $nav_height:70px;
 		border-color:transparent;	
 		float:left;
 		width:100%;
-		margin-top:28.8px;
+		margin-top:35.6px;
 		
 	}
 	
@@ -701,6 +701,34 @@ $nav_height:70px;
 	
 } /*calendar*/
 
+
+/* calendar table on cms pages*/
+.calendar-table{
+	border-bottom:2px solid $color3;
+	margin-top:25px;
+	float:left;
+	width:100%;
+	
+	tbody,tr,th,td{
+		float:left;
+	}
+	
+	tbody,tr{
+		width:100%;	
+	}
+	
+	tbody{
+		padding-bottom:20px;	
+	}
+	
+	.heading-content2{
+		font-size: 24px;
+		letter-spacing: 2px;
+		font-weight: 100;
+		text-transform:uppercase;
+	}
+
+}
 
 
 $mob_calendar_bg:#b7dfe4;
