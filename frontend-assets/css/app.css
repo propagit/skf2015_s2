@@ -401,6 +401,7 @@ a {
       border-width: 2px;
       text-align: center;
       line-height: 40px;
+      display: block;
       flex: 1;
       font-weight: 100;
       font-size: 12px; }
@@ -618,6 +619,10 @@ a {
     float: left; }
 
 /* search results*/
+.page-film-wrap {
+  padding-left: 20px;
+  padding-right: 20px; }
+
 .film h1, .film .caption h4, .caption .film h4, .film .carousel .carousel-caption h4, .carousel .carousel-caption .film h4, .film .tiles .tile .tile-caption h4, .tiles .tile .tile-caption .film h4 {
   text-transform: uppercase;
   margin: 0;
@@ -644,6 +649,21 @@ a {
     display: block; }
 
 /*film*/
+.app-iframe {
+  position: relative;
+  padding-bottom: 65.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border: solid black 1px; }
+  .app-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 .btn-buy {
   min-width: 50px;
   border-radius: 0;

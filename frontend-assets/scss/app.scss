@@ -667,7 +667,7 @@ $nav_height:70px;
 		width:100%;
 		
 		tr{
-			display:flex;	
+			display:flex;
 		}
 		
 		th,td{
@@ -676,6 +676,7 @@ $nav_height:70px;
 			border-width:2px;
 			text-align:center;
 			line-height:40px;
+			display:block;
 			flex:1;
 			font-weight:100;
 			font-size:12px;
@@ -994,6 +995,10 @@ $tile_caption_height:40px;
 	}
 } /* search results*/
 
+.page-film-wrap{
+	padding-left:20px;
+	padding-right:20px;	
+}
 
 .film{
 	h1{
@@ -1033,6 +1038,25 @@ $tile_caption_height:40px;
 		
 	}
 } /*film*/
+
+.app-iframe {
+	position: relative;
+	padding-bottom: 65.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: auto; 
+	-webkit-overflow-scrolling:touch; 
+	border: solid black 1px;
+
+	iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+} 
+
 
 .btn-buy{
 	@include btn($white,$bg4);

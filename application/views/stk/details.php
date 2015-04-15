@@ -22,6 +22,15 @@
                 <div class="col-xs-12 x-gutters">
                     <p class="synopsis"><?=$film['synopsis'];?></p>
                 </div>
+                
+                <?php 
+				if(0){
+				#if($film['youtube']){ 
+				?>
+                	<!--<div class="col-xs-12 x-gutters app-iframe film-trailer">
+                    	<iframe width="560" height="315" src="https://www.youtube.com/embed/IuisYC9x3Y0" frameborder="0" allowfullscreen></iframe>
+                    </div>-->
+                <?php } ?>
             </div>
         </div>
     </div>
