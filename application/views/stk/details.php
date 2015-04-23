@@ -10,8 +10,10 @@
                     <h3><?= $sessions[0]['venue']?></h3>
                     
                     <span class="fares">
-                    	<span class="fare-solo">$18 Full/$15 Concession</span>
-                    	<span class="fare-group">Group bookings for 6 or more: $13.50 per person</span>
+                    	<span class="fare-solo">$<?=FULL_PRICE;?> Full/$<?=CONCESSION_PRICE;?> Concession</span>
+                        <?php if(0){ ?>
+                    		<span class="fare-group">Group bookings for 6 or more: $13.50 per person</span>
+						<?php } ?>
                     </span>
                 </div>
                 <div class="col-md-4 x-gutters">

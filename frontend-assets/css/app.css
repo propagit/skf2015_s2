@@ -692,6 +692,9 @@ a {
     padding: 35px 0 20px;
     /*footer left block*/
     /*footer right block*/ }
+    #footer .block.city-pp-block {
+      padding-left: 70px;
+      padding-right: 70px; }
   #footer .sponsors {
     background-color: #006f80;
     /*min-height:205px;*/
@@ -875,7 +878,13 @@ a {
   .subscribe-box input[type="text"] {
     width: 64%; }
 
-  /*subscribe-box*/ }
+  /*subscribe-box*/
+  #footer {
+    /* sponsors */ }
+    #footer .sponsors .block img {
+      width: 100%; }
+
+  /* footer */ }
 @media (min-width: 767px) and (max-width: 991px) {
   #top-nav {
     /*nav*/ }
@@ -953,6 +962,9 @@ a {
       float: left;
       padding-left: 0;
       padding-right: 0; }
+      #footer .block.city-pp-block {
+        padding-left: 0;
+        padding-right: 0; }
     #footer .sponsors .block .rt-block .gov-sp {
       float: left;
       width: 100%; }

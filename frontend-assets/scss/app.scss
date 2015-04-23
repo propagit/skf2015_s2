@@ -1073,6 +1073,11 @@ $tile_caption_height:40px;
 		  /*padding:35px 70px 20px 70px;	*/
 		  padding:35px 0 20px;	
 		  
+		  &.city-pp-block{
+				padding-left:70px;  
+				padding-right:70px;
+		  }
+		  
 		  /*footer left block*/
 		  .lt-block{
 			  
@@ -1343,6 +1348,20 @@ $tile_caption_height:40px;
 		
 		
 	} /*subscribe-box*/
+	
+	#footer{
+		
+		
+		.sponsors{
+			.block{
+				img{
+					width:100%;	
+				}
+			}
+		} /* sponsors */
+		
+		
+	} /* footer */
 }
 
 @media (min-width:767px) and (max-width:991px){
@@ -1395,6 +1414,8 @@ $tile_caption_height:40px;
 
 		
 	} /* side-panel*/
+	
+	
 }
 
 @media (max-width:991px){
@@ -1480,6 +1501,10 @@ $tile_caption_height:40px;
 			padding-left:0;
 			padding-right:0;
 			
+			&.city-pp-block{
+				padding-left:0;  
+				padding-right:0;
+		  	}
 				
 		} /* block*/
 		

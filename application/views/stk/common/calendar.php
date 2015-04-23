@@ -4,16 +4,16 @@
 	$prev_mth = array(27,28,29,30);
 	
 	$events = array(
-						21 => base_url().'page-237/2015-festival-calendar.html#thu21',
-						22 => base_url().'page-237/2015-festival-calendar.html#fri22',
-						23 => base_url().'page-237/2015-festival-calendar.html#sat23',
-						24 => base_url().'page-237/2015-festival-calendar.html#sun24',
-						25 => base_url().'page-237/2015-festival-calendar.html#mon25',
-						26 => base_url().'page-237/2015-festival-calendar.html#tue26',
-						27 => base_url().'page-237/2015-festival-calendar.html#wed27',
-						28 => base_url().'page-237/2015-festival-calendar.html#thu28',
-						29 => base_url().'page-237/2015-festival-calendar.html#fri29',
-						30 => base_url().'page-237/2015-festival-calendar.html#sat30',
+						21 => base_url().'page-308/2015-festival-calendar.html#thu21',
+						22 => base_url().'page-308/2015-festival-calendar.html#fri22',
+						23 => base_url().'page-308/2015-festival-calendar.html#sat23',
+						24 => base_url().'page-308/2015-festival-calendar.html#sun24',
+						25 => base_url().'page-308/2015-festival-calendar.html#mon25',
+						26 => base_url().'page-308/2015-festival-calendar.html#tue26',
+						27 => base_url().'page-308/2015-festival-calendar.html#wed27',
+						28 => base_url().'page-308/2015-festival-calendar.html#thu28',
+						29 => base_url().'page-308/2015-festival-calendar.html#fri29',
+						30 => base_url().'page-308/2015-festival-calendar.html#sat30',
 					);
 	
 	$this_mth = array();

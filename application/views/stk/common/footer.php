@@ -24,7 +24,7 @@
     
     <div class="sponsors">
         <div class="container">
-            <div class="col-md-2 block">
+            <div class="col-md-3 block city-pp-block">
                 <div class="lt-block">
                     <label class="cpp-label">
                         Produced by
@@ -33,7 +33,7 @@
                 </div>
             </div>
             
-            <div class="col-md-8 block">
+            <div class="col-md-7 block">
                 <div class="rt-block">
                     <label>Government Partners</label>
                     <div class="col-md-5 x-gutters gov-sp scr-aus">
