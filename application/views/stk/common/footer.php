@@ -24,26 +24,35 @@
     
     <div class="sponsors">
         <div class="container">
-            <div class="col-md-4 block">
+            <div class="col-md-2 block">
                 <div class="lt-block">
                     <label class="cpp-label">
                         Produced by
                     </label>
-                    <img class="city-pp-logo" src="<?=base_url();?>frontend-assets/img/core/city-port-phillip-logo.png" alt="city-port-phillip-logo.png" title="City Of Port Phillip Logo">
+                    <a href="http://www.portphillip.vic.gov.au" target="_blank"><img class="city-pp-logo" src="<?=base_url();?>frontend-assets/img/core/city-port-phillip-logo.png" alt="city-port-phillip-logo.png" title="City Of Port Phillip Logo"></a>
                 </div>
             </div>
             
             <div class="col-md-8 block">
                 <div class="rt-block">
                     <label>Government Partners</label>
-                    <div class="col-md-7 x-gutters gov-sp scr-aus">
-                        <img src="<?=base_url();?>frontend-assets/img/core/screen-australia-logo.png" alt="screen-australia-logo.png" title="Screen Australia Logo">
+                    <div class="col-md-5 x-gutters gov-sp scr-aus">
+                        <a href="http://www.screenaustralia.gov.au" target="_blank"><img src="<?=base_url();?>frontend-assets/img/core/screen-australia-logo.png" alt="screen-australia-logo.png" title="Screen Australia Logo"></a>
                     </div>
                     
                     <div class="col-md-5 x-gutters gov-sp film-vic">
-                        <img src="<?=base_url();?>frontend-assets/img/core/film-vic-logo.png" alt="film-vic-logo.png" title="Film Victoria Logo">
+                        <a href="http://www.film.vic.gov.au" target="_blank"><img src="<?=base_url();?>frontend-assets/img/core/film-vic-logo.png" alt="film-vic-logo.png" title="Film Victoria Logo"></a>
                     </div>
                     <label class="skf-ack">The St Kilda Film Festival acknowledges the financial assistance of Screen Australia and Film Victoria.</label>
+                </div>
+            </div>
+            
+            <div class="col-md-2 block">
+                <div class="rt-block">
+                    <label>Major Partner</label>
+                    <div class="col-xs-12 x-gutters partner-logo">
+                        <a href="https://www.olympus.com.au" target="_blank"><img src="<?=base_url();?>frontend-assets/img/olympus-logo.png" alt="olympus-logo.png" title="Olympus Logo"></a>
+                    </div>
                 </div>
             </div>
         </div>

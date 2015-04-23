@@ -77,7 +77,7 @@
                 <a href="<?=base_url();?>"><img src="<?=base_url();?>frontend-assets/img/core/logo.png" title="St Kilda Flim Festival" alt="logo.png"></a>
                 
                 <div class="council-top-logo hidden-xs">
-                	<img src="<?=base_url();?>frontend-assets/img/core/city-port-phillip-logo-top.png" title="St Kilda Flim Festival" alt="logo.png">
+                	<a href="http://www.portphillip.vic.gov.au" target="_blank"><img src="<?=base_url();?>frontend-assets/img/core/city-port-phillip-logo-top.png" title="City Of Port Phillip Logo" alt="city-port-phillip-logo-top.png"></a>
                 </div>
             </div>
             

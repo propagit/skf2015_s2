@@ -688,7 +688,8 @@ a {
 #footer {
   margin-top: 30px; }
   #footer .block {
-    padding: 35px 70px 20px 70px;
+    /*padding:35px 70px 20px 70px;	*/
+    padding: 35px 0 20px;
     /*footer left block*/
     /*footer right block*/ }
   #footer .sponsors {
