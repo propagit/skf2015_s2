@@ -959,7 +959,9 @@ a {
     #footer .sponsors .block .rt-block .film-vic {
       margin-top: 25px; }
     #footer .quick-links .block {
-      float: left; }
+      float: left;
+      padding-left: 0;
+      padding-right: 0; }
 
   /* footer */ }
 @media (max-width: 767px) {
