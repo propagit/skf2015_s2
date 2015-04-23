@@ -715,7 +715,7 @@ a {
     padding-top: 20px;
     color: white; }
     #footer .quick-links .block {
-      padding-top: 0; }
+      padding: 0 70px 20px 70px; }
     #footer .quick-links .lt-block {
       padding-right: 0; }
     #footer .quick-links h6, #footer .quick-links p, #footer .quick-links ul {
