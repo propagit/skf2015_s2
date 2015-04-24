@@ -1,6 +1,6 @@
 <?php
 	$genres = $this->film_model->get_film_genres($film['id']); 
-	$genre = $genres ? implode('/', array_column($genres, 'name')) : '';
+	$genre = $genres ? implode(' / ', array_column($genres, 'name')) : '';
 ?>
 <div class="col-md-6 search-block">
     <a href="<?=base_url()?>details/<?=$film['id']?>">
@@ -8,9 +8,9 @@
     </a>
     <h3><?=$film['title'];?></h3>
     <span class="genre"><?=$genre;?></span>
-    <span class="running-time"><?=$film['running_time'] ? $film['running_time'] : '';?></span>
+    <span class="running-time"><?=$film['running_time'] ? $film['running_time'] . ($film['year'] ? ', ' : '') : '';?></span>
     <span class="format"><?=$film['format'] ? $film['format'] : '';?></span>
-    <span class="year"><?=$film['year'] ? ',' . $film['year'] : '';?></span>
+    <span class="year"><?=$film['year'] ? $film['year'] : '';?></span>
     <p class="synopsis"><?=substr($film['synopsis'],0,120) . '...';?></p>
     
     <ul class="credits">
