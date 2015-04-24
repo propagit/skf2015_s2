@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="col-md-8 x-l-gutter">
     	<div class="cms-body film">
-        	<img src="<?=base_url() . ($film['large_image'] ? "uploads/films/" . $film['large_image'] : "img/youtube.jpg")?>" width="100%" /> 
+        	<img src="<?=base_url() . ($film['large_image'] ? "uploads/films/" . $film['large_image'] : "frontend-assets/img/core/default-placeholder.png")?>" width="100%" /> 
             
             <div class="detail">
                 <div class="col-md-8 x-gutters">
