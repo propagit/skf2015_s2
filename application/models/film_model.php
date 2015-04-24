@@ -300,9 +300,19 @@ class Film_model extends CI_Model {
 		return $this->db->delete('films_genres');
 	}
 	function get_dates() {
-		$this->db->order_by('id','asc');
+		/*$this->db->order_by('id','asc');
 		$query = $this->db->get('dates');
-		return $query->result_array();
+		return $query->result_array();*/
+		
+		# festival runs for 10 days
+		$dates = array();
+		$query = $this->db->get('opening_date');
+		$opening = $query->first_row('array');
+		
+		for($i = 0; $i < 10; $i++){
+			$dates[$i]['date'] = date('Y-m-d',strtotime($opening['opening_date'] . '+'. $i . ' days')); 	
+		}
+		return $dates;
 	}
 	function get_venues() {
 		$this->db->order_by('id','asc');

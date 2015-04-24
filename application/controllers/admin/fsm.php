@@ -76,15 +76,8 @@ class Fsm extends CI_Controller {
 		$data['genres'] = $this->film_model->get_genres();
 		
 		# old dumb code, that got the recrods from a manually filled database
-		#$data['dates'] = $this->film_model->get_dates();
-	
-		# festival runs for 10 days
-		$dates = array();
-		$opening = $this->menu_model->get_opening_date();
-		for($i = 0; $i < 10; $i++){
-			$dates[$i]['date'] = date('Y-m-d',strtotime($opening['opening_date'] . '+'. $i . ' days')); 	
-		}
-		$data['dates'] = $dates;
+		# new code uses the same function, but generates dates based on opening date
+		$data['dates'] = $this->film_model->get_dates();
 		
 		$data['opening_date'] = $this->menu_model->get_opening_date();
 		$data['venues'] = $this->film_model->get_venues();

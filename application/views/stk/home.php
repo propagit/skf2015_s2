@@ -15,9 +15,9 @@
             
             <a href="<?=base_url();?>">
             <div class="col-md-6 col-xs-12 x-r-gutter tile">
-                <img src="<?=base_url();?>frontend-assets/img/tickets-banner.jpg" alt="tickets-banner.jpg" title="Festival Tickets Banner" />
+                <img src="<?=base_url();?>frontend-assets/img/filmmaker-development.jpg" alt="filmmaker-development.jpg" title="Film Maker Development Banner" />
                 <div class="tile-caption">
-                    <h1>SoundKilda</h1>
+                    <h1>Filmmaker Development</h1>
                 </div>
             </div>
             </a>
