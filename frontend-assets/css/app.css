@@ -485,7 +485,7 @@ a {
     height: auto; }
   .cms-body img.img-no-bootstrap {
     width: auto;
-    /*padding-left:35px;*/ }
+    padding-left: 35px; }
   .cms-body table tr td {
     padding: 0;
     border-top: none; }
