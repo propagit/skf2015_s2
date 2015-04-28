@@ -569,7 +569,7 @@ a {
     margin-bottom: 0; }
   .search-results hr {
     margin-top: 30px;
-    border-top: 2px solid #006f80; }
+    border-bottom: 2px solid #006f80; }
   .search-results .viewer-discreation {
     padding-left: 12.5px;
     padding-right: 15px;
