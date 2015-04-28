@@ -486,6 +486,8 @@ a {
   .cms-body img.img-no-bootstrap {
     width: auto;
     padding-left: 35px; }
+  .cms-body .bs-x-lt-padding {
+    padding-left: 0; }
   .cms-body table tr td {
     padding: 0;
     border-top: none; }
