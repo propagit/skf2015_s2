@@ -22,14 +22,18 @@
                     </ul>
                     
                     <span class="fares">
-                    	<?php if($film['type'] == 2){ # soundkilda film ?>
-                        	<span class="fare-solo">$<?=FULL_PRICE_SOUNDKILDA;?> Full/$<?=CONCESSION_PRICE_SOUNDKILDA;?> Concession</span>
+                    	<?php if($film['free_event']){ ?>
+                    		<span class="fare-solo">FREE EVENT</span>
                         <?php }else{ ?>
-                    		<span class="fare-solo">$<?=FULL_PRICE;?> Full/$<?=CONCESSION_PRICE;?> Concession</span>
+							<?php if($film['type'] == 2){ # soundkilda film ?>
+                                <span class="fare-solo">$<?=FULL_PRICE_SOUNDKILDA;?> Full/$<?=CONCESSION_PRICE_SOUNDKILDA;?> Concession</span>
+                            <?php }else{ ?>
+                                <span class="fare-solo">$<?=FULL_PRICE;?> Full/$<?=CONCESSION_PRICE;?> Concession</span>
+                            <?php } ?>
+                            <?php if(0){ ?>
+                                <span class="fare-group">Group bookings for 6 or more: $13.50 per person</span>
+                            <?php } ?>
                         <?php } ?>
-                        <?php if(0){ ?>
-                    		<span class="fare-group">Group bookings for 6 or more: $13.50 per person</span>
-						<?php } ?>
                     </span>
                 </div>
                 <div class="col-md-4 x-gutters">

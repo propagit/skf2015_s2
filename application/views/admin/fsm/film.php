@@ -44,6 +44,10 @@ function gotop() { window.location = '<?=base_url()?>admin/fsm/top'; }
         <dd><input type="text" class="textfield rounded" name="format" /></dd>
     </dl>
     <dl class="film">
+    	<dt>Free Event</dt>
+        <dd><input type="checkbox" name="free_event" /></dd>
+    </dl>
+    <dl class="film">
     	<dt>Genre</dt>
         <dd>
         	<?php foreach($genres as $g) { ?>
