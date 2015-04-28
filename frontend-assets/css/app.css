@@ -20,6 +20,17 @@
 /* carousel caption font, prev version - 'Open Sans', sans-serif*/
 /* nav font */
 /* default is turquoise*/
+.app_flex, #header .event, #side-panel .timer .countdown-row, .calendar table tr, .mob-calendar table tr, .festival-sponsors .sp-row {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex; }
+
 .app-btn, #top-nav .mob-nav .btn-navbar, .subscribe-box .subscribe-btn {
   min-width: 50px;
   border-radius: 0;
@@ -56,16 +67,16 @@ h6 {
 a {
   color: #3d3d3c; }
 
+hr {
+  border-top: none; }
+
 #header {
   padding-top: 75px; }
   #header .logo img {
     /*max-width:335px;	*/ }
   #header .event {
-    color: #ffef3f;
-    display: flex;
-    /*margin-top:25px;*/ }
+    color: #ffef3f; }
     #header .event span {
-      /*flex:1;*/
       display: block; }
     #header .event .date {
       font-family: "Inconsolata";
@@ -75,7 +86,6 @@ a {
       font-size: 24px;
       line-height: 30px;
       font-weight: 400;
-      /*flex:0.5;*/
       margin-top: 5px; }
   #header .mini-ladders {
     position: absolute;
@@ -338,12 +348,21 @@ a {
     color: #ffef3f;
     /* countdown-row*/ }
     #side-panel .timer .countdown-row {
-      display: flex;
       padding: 0;
       margin: 0;
       margin-left: -15px;
       /*countdown-section*/ }
       #side-panel .timer .countdown-row .countdown-section {
+        -webkit-box-flex: 1;
+        /* OLD - iOS 6-, Safari 3.1-6 */
+        -moz-box-flex: 1;
+        /* OLD - Firefox 19- */
+        width: 20%;
+        /* For old syntax, otherwise collapses. */
+        -webkit-flex: 1;
+        /* Chrome */
+        -ms-flex: 1;
+        /* IE 10 */
         flex: 1; }
         #side-panel .timer .countdown-row .countdown-section .countdown-amount {
           font-size: 42px;
@@ -393,16 +412,6 @@ a {
     color: #ffef3f; }
   .calendar table, .mob-calendar table {
     width: 100%; }
-    .calendar table tr, .mob-calendar table tr {
-      display: -webkit-box;
-      /* OLD - iOS 6-, Safari 3.1-6 */
-      display: -moz-box;
-      /* OLD - Firefox 19- (buggy but mostly works) */
-      display: -ms-flexbox;
-      /* TWEENER - IE 10 */
-      display: -webkit-flex;
-      /* NEW - Chrome */
-      display: flex; }
     .calendar table th, .mob-calendar table th, .calendar table td, .mob-calendar table td {
       border-color: #3d3d3c;
       border-style: solid;
@@ -719,6 +728,56 @@ a {
     outline: none; }
   .btn-buy .fa {
     font-size: 18px; }
+
+.festival-sponsors {
+  background: white;
+  padding-left: 35px;
+  padding-right: 35px; }
+  .festival-sponsors h3 {
+    text-transform: uppercase; }
+  .festival-sponsors hr {
+    margin-top: 30px;
+    border-bottom: 2px solid #006f80;
+    float: left;
+    width: 100%; }
+  .festival-sponsors .sp-row {
+    width: 100%;
+    float: left; }
+    .festival-sponsors .sp-row .sp-block {
+      -webkit-box-flex: 1;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      -moz-box-flex: 1;
+      /* OLD - Firefox 19- */
+      width: 20%;
+      /* For old syntax, otherwise collapses. */
+      -webkit-flex: 1;
+      /* Chrome */
+      -ms-flex: 1;
+      /* IE 10 */
+      flex: 1;
+      line-height: 60px; }
+    .festival-sponsors .sp-row h3 {
+      display: block; }
+  .festival-sponsors .produced-by img {
+    width: 40%; }
+  .festival-sponsors .produced-by.sp-block {
+    line-height: 122px; }
+  .festival-sponsors .major-partner img {
+    width: 50%; }
+  .festival-sponsors .major-partner.sp-block {
+    line-height: 122px; }
+  .festival-sponsors .gov-partners img {
+    width: 70%; }
+  .festival-sponsors .media-partners img {
+    width: 64%; }
+  .festival-sponsors .festival-partners img {
+    width: 71%; }
+  .festival-sponsors .festival-partners .sp-block {
+    line-height: 90px; }
+  .festival-sponsors .festival-supporters img {
+    width: 71%; }
+  .festival-sponsors .festival-supporters .sp-block {
+    line-height: 90px; }
 
 /*.festival-sponsors img{
 	width:36% !important;	

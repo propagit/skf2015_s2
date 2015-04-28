@@ -6,7 +6,13 @@
 <div class="container">
 	<div class="col-md-8 x-l-gutter">
     	<div class="cms-body film">
-        	<img src="<?=base_url() . ($film['large_image'] ? "uploads/films/" . $film['large_image'] : "frontend-assets/img/core/default-placeholder.png")?>" width="100%" /> 
+        	
+        	<?php if($film['large_image']){ ?>
+            	<img src="<?=base_url();?>uploads/films/<?=$film['large_image'];?>" width="100%" alt="<?=$film['large_image'];?>" /> 
+            <?php } ?>
+            <?php if(0){ # not used now, for ref only ?>
+        		<img src="<?=base_url() . ($film['large_image'] ? "uploads/films/" . $film['large_image'] : "frontend-assets/img/core/default-placeholder.png")?>" width="100%" /> 
+            <?php } ?>
             
             <div class="detail">
                 <div class="col-md-8 x-gutters">

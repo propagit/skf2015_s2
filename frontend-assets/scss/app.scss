@@ -94,6 +94,21 @@ $fa:'FontAwesome';
 	}
 }
 
+.app_flex{
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;	
+}
+@mixin app_set_flex($flex){
+	-webkit-box-flex: $flex;      /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: $flex;         /* OLD - Firefox 19- */
+	width: 20%;               /* For old syntax, otherwise collapses. */
+	-webkit-flex: $flex;          /* Chrome */
+	-ms-flex: $flex;              /* IE 10 */
+	flex: $flex; 
+}
 
 @mixin add_gutters($left:15px,$right:15px){
 	padding-left:$left;
@@ -139,7 +154,9 @@ h6{
 a{
 	color:$color4;	
 }
-
+hr{
+	border-top:none;	
+}
 #header{
 	padding-top:75px;
 	
@@ -152,11 +169,9 @@ a{
 	
 	.event{
 		color:$color2;	
-		display:flex;
-		/*margin-top:25px;*/
+		@extend .app_flex;
 		
 		span{
-			/*flex:1;*/
 			display:block;
 		}
 		
@@ -169,7 +184,6 @@ a{
 			font-size: 24px;
 			line-height:30px;
   			font-weight: 400;
-			/*flex:0.5;*/
 			margin-top:5px;
 		}
 	}
@@ -574,13 +588,13 @@ $nav_height:70px;
 		color:$color2;
 		
 		.countdown-row{
-			display:flex;
+			@extend .app_flex;
 			padding:0;
 			margin:0;
 			margin-left:-15px;
 			
 			.countdown-section{
-				flex:1;
+				@include app_set_flex(1);
 				
 				.countdown-amount{
 					font-size:42px;
@@ -667,11 +681,7 @@ $nav_height:70px;
 		width:100%;
 		
 		tr{
-			display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-			display: -ms-flexbox;      /* TWEENER - IE 10 */
-			display: -webkit-flex;     /* NEW - Chrome */
-			display: flex; 
+			@extend .app_flex;
 		}
 		
 		th,td{
@@ -683,12 +693,7 @@ $nav_height:70px;
 			display:block;
 			font-weight:100;
 			font-size:12px;
-			-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
-			-moz-box-flex: 1;         /* OLD - Firefox 19- */
-			width: 20%;               /* For old syntax, otherwise collapses. */
-			-webkit-flex: 1;          /* Chrome */
-			-ms-flex: 1;              /* IE 10 */
-			flex: 1;  
+			@include app_set_flex(1);
 		}
 		
 		thead{
@@ -1102,6 +1107,81 @@ $tile_caption_height:40px;
 	padding-right:20px;
 }
 .festival-sponsors{
+	background:$white;
+	padding-left:35px;
+	padding-right:35px;
+	
+	h3{
+		text-transform:uppercase;	
+	}
+	
+	hr{
+		margin-top: 30px;
+ 		border-bottom: 2px solid $color3;
+		float:left;
+		width:100%;	
+	}
+	
+	.sp-row{
+		@extend .app_flex;
+		width:100%;
+		float:left;
+		
+		
+		.sp-block{
+			@include app_set_flex(1);
+			line-height:60px;
+			
+		}
+		
+		h3{
+			display:block;	
+		}
+	}
+	.produced-by{
+		img{
+			width:40%;	
+		}
+		&.sp-block{
+			line-height:122px;	
+		}
+	}
+	.major-partner{
+		img{
+			width:50%;	
+		}
+		&.sp-block{
+			line-height:122px;	
+		}
+	}
+	
+	.gov-partners{
+		img{
+			width:70%;	
+		}
+	}
+	.media-partners{
+		img{
+			width:64%;	
+		}
+	}
+	.festival-partners{
+		img{
+			width:71%;	
+		}
+		.sp-block{
+			line-height:90px;	
+		}
+	}
+	.festival-supporters{
+		img{
+			width:71%;	
+		}
+		.sp-block{
+			line-height:90px;	
+		}
+	}
+	
 	
 	
 }
