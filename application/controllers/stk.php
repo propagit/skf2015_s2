@@ -599,5 +599,12 @@ class Stk extends CI_Controller {
 		
 	}
 	
+	function sponsors()
+	{
+		$this->load->view('stk/common/header',array());
+		$this->load->view('stk/sponsors');		
+		$this->load->view('stk/common/footer');	
+	}
+	
 }
 ?>
