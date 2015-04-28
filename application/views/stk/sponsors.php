@@ -94,7 +94,26 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="col-xs-12 x-gutters festival-partners">
+                <div class="sp-row">
+                   
+                    <div class="sp-block hidden-xs">
+                        &nbsp;
+                    </div>
+                    <div class="sp-block hidden-xs">
+                         &nbsp;
+                    </div>
+                     <div class="sp-block">
+                        <img src="<?=base_url();?>uploads/sponsors/FowlesWine_Large.png">
+                    </div>
+                    <div class="sp-block hidden-xs">
+                         &nbsp;
+                    </div>
+                    <div class="sp-block hidden-xs">
+                        &nbsp;
+                    </div>
+                </div>
+            </div>
             <hr>
             
             <div class="col-xs-12 x-gutters festival-supporters">
@@ -107,7 +126,7 @@
                         <img src="<?=base_url();?>uploads/sponsors/MediaTec-Large.png">
                     </div>
                     <div class="sp-block">
-                        <img src="<?=base_url();?>uploads/sponsors/MediaTec-Large.png">
+                        <img src="<?=base_url();?>uploads/sponsors/MotorCityLarge.jpg">
                     </div>
                     <div class="sp-block">
                         <img src="<?=base_url();?>uploads/sponsors/musicEffectsLarge.png">
