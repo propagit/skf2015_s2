@@ -1,6 +1,7 @@
 <div class="container">
 	<div class="col-md-8 x-l-gutter">
-    	<div class="cms-body festival-sponsors">
+    	<div class="cms-body">
+        <div class="festival-sponsors">
         	<h1>Festival Partners</h1>
             
             <div class="col-xs-12 x-gutters">
@@ -141,7 +142,7 @@
                     </div>
                     </div>
             </div>
-           
+       	</div>    
         </div><!--cms-->
     </div>
     

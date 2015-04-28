@@ -732,7 +732,8 @@ hr {
 .festival-sponsors {
   background: white;
   padding-left: 35px;
-  padding-right: 35px; }
+  padding-right: 35px;
+  float: left; }
   .festival-sponsors h3 {
     text-transform: uppercase; }
   .festival-sponsors hr {
