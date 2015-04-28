@@ -37,7 +37,9 @@
                     </span>
                 </div>
                 <div class="col-md-4 x-gutters">
+                	<?php if(!$film['free_event']){ ?>
                     <button class="btn btn-buy pull" href="#">Buy Tickets</button>
+                    <?php } ?>
                     <div style="float:right; margin-top:15px;" class="fb-like" data-href="<?=base_url();?>/details/<?=$film['id'];?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
                 </div>
                 
