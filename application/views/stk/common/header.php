@@ -42,10 +42,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <?php } ?>
 
-
 <!--timer-->
 <script src="<?=base_url()?>frontend-assets/js/jquery.countdown-2.0.2/jquery.plugin.min.js"></script>
 <script src="<?=base_url()?>frontend-assets/js/jquery.countdown-2.0.2/jquery.countdown.min.js"></script>
+
+<!--[if lt IE 9]>
+  <script src="<?=base_url()?>frontend-assets/js/respond.min.js"></script>
+<![endif]-->
+
 <!--app.script.js-->
 <script src="<?=base_url()?>frontend-assets/js/app.scripts.js"></script>
 
