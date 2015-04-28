@@ -18,6 +18,7 @@
         <?=$film['producer'] ? '<li><strong>Producer </strong>' . $film['producer'] . '</li>' : '';?>
         <?=$film['screen_writer'] ? '<li><strong>Screenwriter </strong>' . $film['screen_writer'] . '</li>' : '';?>
         <?=$film['photography_director'] ? '<li><strong>DOP </strong>' . $film['photography_director'] . '</li>' : '';?>
+        <?=$film['artist'] ? '<li><strong>Artist </strong>' . $film['artist'] . '</li>' : '';?>
     </ul>
     
     <a class="more-info" href="<?=base_url();?>details/<?=$film['id'];?>">More info</a>
