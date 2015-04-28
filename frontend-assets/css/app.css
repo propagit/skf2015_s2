@@ -702,6 +702,18 @@ a {
   .btn-buy .fa {
     font-size: 18px; }
 
+.festival-sponsors img {
+  width: 36% !important; }
+
+.gov-partners img {
+  width: 72% !important; }
+
+.festival-partners img {
+  width: 100% !important; }
+
+.festival-supporters img {
+  width: 90% !important; }
+
 #footer {
   margin-top: 30px; }
   #footer .block {

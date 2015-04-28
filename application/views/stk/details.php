@@ -15,6 +15,9 @@
                     <h3><?= $sessions[0]['venue']?></h3>
                     <span class="genre"><?=$genre;?></span>
                     <ul class="credits">
+                    	<?=$film['year'] ? '<li><strong>Year</strong> ' . $film['year'] . '</li>' : '';?>
+                        <?=$film['running_time'] ? '<li><strong>Running Time </strong>' . $film['running_time'] . '</li>' : '';?>
+                        <?=$film['format'] ? '<li><strong>Format </strong>' . $film['format'] . '</li>' : '';?>
 						<?=$film['director'] ? '<li><strong>Director </strong>' . $film['director'] . '</li>' : '';?>
                         <?=$film['producer'] ? '<li><strong>Producer </strong>' . $film['producer'] . '</li>' : '';?>
                         <?=$film['screen_writer'] ? '<li><strong>Screenwriter </strong>' . $film['screen_writer'] . '</li>' : '';?>
