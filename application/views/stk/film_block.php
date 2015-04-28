@@ -2,7 +2,7 @@
 	$genres = $this->film_model->get_film_genres($film['id']); 
 	$genre = $genres ? implode(' / ', array_column($genres, 'name')) : '';
 ?>
-<div class="col-md-6 search-block">
+<div class="col-md-6 search-block film">
     <a href="<?=base_url()?>details/<?=$film['id']?>">
         <img src="<?=base_url() . ($film['large_image'] ? "uploads/films/" . $film['large_image'] : "frontend-assets/img/core/default-placeholder.png")?>" width="100%" />   
     </a>
@@ -14,10 +14,10 @@
     <p class="synopsis"><?=substr($film['synopsis'],0,120) . '...';?></p>
     
     <ul class="credits">
-        <li><strong>Director </strong><?=$film['director'] ? $film['director'] : ' NA ';?></li>
-        <li><strong>Producer </strong><?=$film['producer'] ? $film['producer'] : ' NA ';?></li>
-        <li><strong>Screenwriter </strong><?=$film['screen_writer'] ? $film['screen_writer'] : ' NA ';?></li>
-        <li><strong>DOP </strong><?=$film['photography_director'] ? $film['photography_director'] : ' NA ';?></li>
+        <?=$film['director'] ? '<li><strong>Director </strong>' . $film['director'] . '</li>' : '';?>
+        <?=$film['producer'] ? '<li><strong>Producer </strong>' . $film['producer'] . '</li>' : '';?>
+        <?=$film['screen_writer'] ? '<li><strong>Screenwriter </strong>' . $film['screen_writer'] . '</li>' : '';?>
+        <?=$film['photography_director'] ? '<li><strong>DOP </strong>' . $film['photography_director'] . '</li>' : '';?>
     </ul>
     
     <a class="more-info" href="<?=base_url();?>details/<?=$film['id'];?>">More info</a>

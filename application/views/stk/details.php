@@ -1,3 +1,8 @@
+<?php
+	$genres = $this->film_model->get_film_genres($film['id']); 
+	$genre = $genres ? implode(' / ', array_column($genres, 'name')) : '';
+?>
+
 <div class="container">
 	<div class="col-md-8 x-l-gutter">
     	<div class="cms-body film">
@@ -8,6 +13,13 @@
                     <h1 class="title"><?=$film['title'];?></h1>
                     <h3><?= date("l j F g:i A ",strtotime($sessions[0]['time']))?></h3>
                     <h3><?= $sessions[0]['venue']?></h3>
+                    <span class="genre"><?=$genre;?></span>
+                    <ul class="credits">
+						<?=$film['director'] ? '<li><strong>Director </strong>' . $film['director'] . '</li>' : '';?>
+                        <?=$film['producer'] ? '<li><strong>Producer </strong>' . $film['producer'] . '</li>' : '';?>
+                        <?=$film['screen_writer'] ? '<li><strong>Screenwriter </strong>' . $film['screen_writer'] . '</li>' : '';?>
+                        <?=$film['photography_director'] ? '<li><strong>DOP </strong>' . $film['photography_director'] . '</li>' : '';?>
+                    </ul>
                     
                     <span class="fares">
                     	<?php if($film['type'] == 2){ # soundkilda film ?>

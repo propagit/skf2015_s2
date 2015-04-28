@@ -820,7 +820,7 @@ $tile_caption_height:40px;
 	
 	img.img-no-bootstrap{
 		width:auto;	
-		padding-left:35px;
+		/*padding-left:35px;*/
 	}
 	
 	table{
@@ -1015,6 +1015,23 @@ $tile_caption_height:40px;
 		margin-top:5px;
 		padding:0;
 	}
+	.genre{
+		display:block;
+		margin-top:20px;	
+	}
+	ul.credits{
+		list-style:none;	
+		margin:0;
+		padding:0;
+		margin-bottom:20px;
+		
+		li{
+			strong{
+				font-weight:600;	
+			}
+		}
+	}
+	
 	.detail{
 		@include add_gutters(30px,30px);	
 		margin-top:30px;
@@ -1033,10 +1050,13 @@ $tile_caption_height:40px;
 			display:block;	
 		}
 		
-		
-		
-		
+		.credits{
+			margin-top:20px;	
+		}
 	}
+	
+	
+		
 } /*film*/
 
 .app-iframe {

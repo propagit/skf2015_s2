@@ -26,7 +26,7 @@
 #calendar-table-header
 {
 	width:100%;
-	margin-bottom:30px;
+	/*margin-bottom:30px;*/
 }
 
 .calendar-table, .news-table
@@ -51,7 +51,8 @@
 }
 .calendar-with-bottom-gap
 {
-	margin-bottom:50px;
+	/*margin-bottom:50px;*/
+	margin-bottom:0;
 }
 
 

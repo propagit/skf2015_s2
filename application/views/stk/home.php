@@ -4,7 +4,7 @@
 		<?php $this->load->view('stk/banners');?>
         
         <div class="tiles">
-        	<a href="<?=base_url();?>">
+        	<a target="_blank" href="<?=base_url();?>Program">
             <div class="col-md-6 col-xs-12 x-l-gutter tile">
                 <img src="<?=base_url();?>frontend-assets/img/program-banner.jpg" alt="program-banner.jpg" title="Program Banner" />
                 <div class="tile-caption">
@@ -13,7 +13,7 @@
             </div>
             </a>
             
-            <a href="<?=base_url();?>">
+            <a href="<?=base_url();?>page-328/filmmaker-development-overview">
             <div class="col-md-6 col-xs-12 x-r-gutter tile">
                 <img src="<?=base_url();?>frontend-assets/img/filmmaker-development.jpg" alt="filmmaker-development.jpg" title="Film Maker Development Banner" />
                 <div class="tile-caption">
@@ -23,7 +23,7 @@
             </a>
         
         
-            <a href="<?=base_url();?>page-265/top-100-short-films">
+            <a href="<?=base_url();?>page-329/top-100-test-2">
             <div class="col-md-6 col-xs-12 x-l-gutter tile">
                 <img src="<?=base_url();?>frontend-assets/img/top-100-banner.jpg" alt="top-100-banner.jpg" title="Top 100 Banner" />
                 <div class="tile-caption">
@@ -32,7 +32,7 @@
             </div>
             </a>
             
-            <a href="<?=base_url();?>page-269/soundkilda">
+            <a href="<?=base_url();?>page-298/soundkilda">
             <div class="col-md-6 col-xs-12 x-r-gutter tile">
                 <img src="<?=base_url();?>frontend-assets/img/sound-kilda-banner.jpg" alt="sound-kilda-banner.jpg" title="SoundKilda Banner" />
                 <div class="tile-caption">

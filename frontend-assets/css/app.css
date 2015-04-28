@@ -485,7 +485,7 @@ a {
     height: auto; }
   .cms-body img.img-no-bootstrap {
     width: auto;
-    padding-left: 35px; }
+    /*padding-left:35px;*/ }
   .cms-body table tr td {
     padding: 0;
     border-top: none; }
@@ -635,6 +635,16 @@ a {
   margin: 0;
   margin-top: 5px;
   padding: 0; }
+.film .genre {
+  display: block;
+  margin-top: 20px; }
+.film ul.credits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px; }
+  .film ul.credits li strong {
+    font-weight: 600; }
 .film .detail {
   padding-left: 30px;
   padding-right: 30px;
@@ -647,6 +657,8 @@ a {
     margin-bottom: 30px; }
   .film .detail .fare-solo, .film .detail .fare-group {
     display: block; }
+  .film .detail .credits {
+    margin-top: 20px; }
 
 /*film*/
 .app-iframe {
