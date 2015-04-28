@@ -1015,8 +1015,8 @@ $tile_caption_height:40px;
 		font-weight:400;
 		font-size:18px;	
 		letter-spacing:0;
-		margin:0;
-		margin-top:5px;
+		/*margin:0;
+		margin-top:5px;*/
 		padding:0;
 	}
 	.genre{
@@ -1040,6 +1040,10 @@ $tile_caption_height:40px;
 		@include add_gutters(30px,30px);	
 		margin-top:30px;
 		
+		h3{
+			margin:0;
+			margin-top:5px;
+		}
 		span{
 			font-weight:600;	
 		}

@@ -634,8 +634,8 @@ a {
   font-weight: 400;
   font-size: 18px;
   letter-spacing: 0;
-  margin: 0;
-  margin-top: 5px;
+  /*margin:0;
+  margin-top:5px;*/
   padding: 0; }
 .film .genre {
   display: block;
@@ -651,6 +651,9 @@ a {
   padding-left: 30px;
   padding-right: 30px;
   margin-top: 30px; }
+  .film .detail h3 {
+    margin: 0;
+    margin-top: 5px; }
   .film .detail span {
     font-weight: 600; }
   .film .detail .fares {

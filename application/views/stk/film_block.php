@@ -6,7 +6,7 @@
     <a href="<?=base_url()?>details/<?=$film['id']?>">
         <img src="<?=base_url() . ($film['large_image'] ? "uploads/films/" . $film['large_image'] : "frontend-assets/img/core/default-placeholder.png")?>" width="100%" />   
     </a>
-    <h3><?=$film['title'];?></h3>
+    <h3 class="add-top-padding"><?=$film['title'];?></h3>
     <span class="genre"><?=$genre;?></span>
     <span class="running-time"><?=$film['running_time'] ? $film['running_time'] . ($film['year'] ? ', ' : '') : '';?></span>
     <span class="format"><?=$film['format'] ? $film['format'] : '';?></span>
