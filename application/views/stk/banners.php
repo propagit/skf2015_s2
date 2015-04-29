@@ -9,7 +9,7 @@
             ?>
            
             <div class="item <?=!$count ? 'active' : '';?>">
-                <a href="<?=$alls['url'] ? $alls['url'] : '#';?>">
+                <a href="<?=$alls['url'] ? $alls['url'] : '#';?>" target="_blank">
                     <img src="<?=base_url().'photos/news_sticker/'.$alls['image'];?>" />
                     <div class="carousel-caption">
                         <h1><?=$alls['subheading'];?></h1>
