@@ -24,7 +24,9 @@
                         </div>
 	        			
                         <? if($heading != "SEARCH RESULTS"){ ?>
-                            <a target="_blank" href="<?=$event['ticket_link'];?>"><div class="btn btn-buy pull">Buy Tickets</div></a>
+                        	<?php if(0){ ?>
+                            <!--<a target="_blank" href="<?=$event['ticket_link'];?>"><div class="btn btn-buy pull">Buy Tickets</div></a>--><?php } ?>
+                            <a target="_blank" href="http://www.ticketmaster.com.au/St-Kilda-Film-Festival-tickets/artist/1846524?tm_link=seo_bc_name"><div class="btn btn-buy pull">Buy Tickets</div></a>
                         <? } ?>
                     </div>
                 </div>
