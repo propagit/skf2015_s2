@@ -37,7 +37,7 @@
                     	<?php if($film['free_event']){ ?>
                     		<span class="fare-solo">FREE EVENT</span>
                         <?php }else{ ?>
-                        	<?php if($film['featuring'] == 1){ ?>
+                        	<?php if($film['opening_night'] == 1){ ?>
                            		<span class="fare-solo">$<?=OPENING_FULL_PRICE;?> Full/$<?=OPENING_CONCESSION_PRICE;?> Concession</span>
                             <?php }else{ ?>
 							<?php if($film['type'] == 2){ # soundkilda film ?>

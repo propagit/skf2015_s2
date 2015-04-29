@@ -43,6 +43,10 @@ function deletesession(i) { $j('#sess-' + i).remove(); }
         <dd><input type="checkbox" name="free_event" <?=$film['free_event'] ? 'checked="checked"' : '';?> /></dd>
     </dl>
     <dl class="film">
+    	<dt>Opening Night</dt>
+        <dd><input type="checkbox" name="opening_night" <?=$film['opening_night'] ? 'checked="checked"' : '';?>/></dd>
+    </dl>
+    <dl class="film">
     	<dt>Genre</dt>
         <dd>
         	<?php foreach($genres as $g) { ?>

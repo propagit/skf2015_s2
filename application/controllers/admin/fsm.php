@@ -105,6 +105,7 @@ class Fsm extends CI_Controller {
 			'blogger' => $_POST['blogger'],
 			'twitter' => $_POST['twitter'],
 			'free_event' => isset($_POST['free_event']) ? 1 : 0,
+			'opening_night' => isset($_POST['opening_night']) ? 1 : 0
 		);
 	
 		$film_id = $this->film_model->add('films',$data);
@@ -323,6 +324,7 @@ class Fsm extends CI_Controller {
             'youtube' => '"'.$_POST['youtube'].'"',
 			'publicity_blurb' => $_POST['publicity_blurb'],
 			'free_event' => isset($_POST['free_event']) ? 1 : 0,
+			'opening_night' => isset($_POST['opening_night']) ? 1 : 0
 		);
 		if(isset($_POST['featuring']))
 		{
