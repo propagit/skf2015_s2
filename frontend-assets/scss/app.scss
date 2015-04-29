@@ -1086,12 +1086,12 @@ $tile_caption_height:40px;
 
 .app-iframe {
 	position: relative;
-	padding-bottom: 65.25%;
+	padding-bottom: 50.2%;
 	padding-top: 30px;
 	height: 0;
 	overflow: auto; 
 	-webkit-overflow-scrolling:touch; 
-	border: solid black 1px;
+	border:none;
 
 	iframe{
 		position: absolute;

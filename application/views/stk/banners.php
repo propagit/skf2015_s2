@@ -1,24 +1,31 @@
 <?php $all = $this->news_sticker_model->get_published(); ?>    
-<div id="banners" class="carousel slide" data-ride="carousel">
+<div id="banners" class="carousel slide" data-ride="carousel" data-interval="false">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
         
+          
+            <!-- trailer embeded from youtube-->
+            <div class="item active">
+               <div class="app-iframe">
+                  <iframe width="100%" height="auto" src="https://www.youtube.com/embed/77N11sAHJgI" frameborder="0" allowfullscreen></iframe>
+               </div>
+            </div>
             <?php
-                $count = 0; 
                 foreach($all as $alls){
             ?>
-           
-            <div class="item <?=!$count ? 'active' : '';?>">
-                <a href="<?=$alls['url'] ? $alls['url'] : '#';?>" target="_blank">
+            <!-- rest of the banners -->
+            <div class="item">
+               <a href="<?=$alls['url'] ? $alls['url'] : '#';?>" target="_blank">
                     <img src="<?=base_url().'photos/news_sticker/'.$alls['image'];?>" />
                     <div class="carousel-caption">
                         <h1><?=$alls['subheading'];?></h1>
                         <h4 class="hidden-xs"><?=$alls['description']?></h4>
                     </div>
                 </a>
+    
             </div>
+            <?php } ?>
            
-            <?php $count++;} ?>
             
         </div>
         
