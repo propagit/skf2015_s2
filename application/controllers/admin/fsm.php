@@ -244,7 +244,8 @@ class Fsm extends CI_Controller {
 			'blogger' => $_POST['blogger'],
 			'publicity_blurb' => $_POST['publicity_blurb'],
 			'competition_session' => $_POST['competition_session'],
-			'order' => $_POST['order']
+			'order' => $_POST['order'],
+			'opening_night' => isset($_POST['opening_night']) ? 1 : 0
 		);
 	
 		$film_id = $this->film_model->add('films',$data);
@@ -451,7 +452,9 @@ class Fsm extends CI_Controller {
 			'blogger' => $_POST['blogger'],
             'youtube' => $_POST['youtube'],
 			'competition_session' => $_POST['competition_session'],
-			'order' => $_POST['order']
+			'order' => $_POST['order'],
+			'opening_night' => isset($_POST['opening_night']) ? 1 : 0
+			
 		);
 		if(isset($_POST['featuring']))
 		{
