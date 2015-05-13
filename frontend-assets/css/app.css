@@ -1201,4 +1201,7 @@ hr {
 
   /*top-nav*/
   #side-panel ul li {
-    margin-right: 8%; } }
+    margin-right: 8%; }
+
+  .img-no-bootstrap {
+    width: 100%; } }
