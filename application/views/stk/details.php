@@ -53,10 +53,14 @@
                     </span>
                 </div>
                 <div class="col-md-4 x-gutters">
-                	<?php if(!$film['free_event']){ ?>
+                	<?php 
+						if(0){
+						# when not hiding the buy ticket link for paid sessions, set the margin top on social link as 15px which is currently set as 0px for both free and paid sessions
+						#if(!$film['free_event']){ 
+					?>
                     <a target="_blank" href="http://www.ticketmaster.com.au/St-Kilda-Film-Festival-tickets/artist/1846524?tm_link=seo_bc_name"><div class="btn btn-buy pull">Buy Tickets</div></a>
                     <?php } ?>
-                    <div style="float:right; margin-top:<?=!$film['free_event'] ? '15px;' : '0px;';?>" class="fb-like" data-href="<?=base_url();?>/details/<?=$film['id'];?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+                    <div style="float:right; margin-top:<?=!$film['free_event'] ? '0px;' : '0px;';?>" class="fb-like" data-href="<?=base_url();?>/details/<?=$film['id'];?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
                 </div>
                 
                 <div class="col-xs-12 x-gutters">
