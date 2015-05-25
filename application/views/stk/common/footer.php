@@ -102,7 +102,7 @@
                    <a href="mailto:filmfest@portphillip.vic.gov.au">filmfest@portphillip.vic.gov.au</a>
 
                   </p>
-                 <p><strong>Media Enquieries</strong><br>
+                 <p><strong>Media Enquiries</strong><br>
                    Call: (03) 9690 9911<br>
 					email: <a href="mailto:media@stkildafilmfestival.com.au">media@stkildafilmfestival.com.au</a> </p>
 

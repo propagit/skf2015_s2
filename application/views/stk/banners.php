@@ -1,5 +1,5 @@
 <?php $all = $this->news_sticker_model->get_published(); ?>    
-<div id="banners" class="carousel slide" data-ride="carousel" data-interval="false">
+<div id="banners" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
         
